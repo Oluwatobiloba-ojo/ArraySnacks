@@ -1,15 +1,6 @@
 package arraysnacks;
 
-import java.util.Arrays;
-
 public class ArrayFunction {
-    public static void main(String[] args) {
-        int[] array = {1, 3, 4, 6, 7};
-        String[] characters = {"a", "b", "c"};
-        String[] result = concatenateListWithList(array, characters);
-        System.out.println(Arrays.toString(result));
-    }
-
     public static int largestElement(int[] arrays) {
         int largest = arrays[0];
         for (int array : arrays) {
@@ -19,7 +10,7 @@ public class ArrayFunction {
     }
 
     public static int[] reverseList(int[] arrays) {
-        int [] result = new int[arrays.length];
+        int[] result = new int[arrays.length];
         int count = 0;
         for (int number = arrays.length - 1; number >= 0; number--) {
             result[count] = arrays[number];
@@ -40,10 +31,10 @@ public class ArrayFunction {
     }
 
     public static int[] oddPosition(int[] integers) {
-        int [] odd = new int[integers.length/2];
+        int[] odd = new int[integers.length / 2];
         int count = 0;
         for (int number = 1; number < integers.length; number += 2) {
-            odd[count] =  integers[number];
+            odd[count] = integers[number];
             count++;
         }
         return odd;
@@ -51,9 +42,9 @@ public class ArrayFunction {
 
     public static int[] evenPosition(int[] integers) {
         int value;
-        if (integers.length % 2 == 0) value = integers.length/2;
-        else  value = integers.length/2 + 1;
-        int [] even = new int[value];
+        if (integers.length % 2 == 0) value = integers.length / 2;
+        else value = integers.length / 2 + 1;
+        int[] even = new int[value];
         int counter = 0;
         for (int index = 0; index < integers.length; index += 2) {
             even[counter] = integers[index];
